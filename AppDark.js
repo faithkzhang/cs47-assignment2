@@ -19,7 +19,7 @@ export default function App() {
   });
   if (!fontsLoaded) return <AppLoading />;
   /* ^Don't mind/edit the code above, it's there to load the font for you! */
-  StatusBar.setBarStyle(Themes.light.statusBar);
+  StatusBar.setBarStyle(Themes.dark.statusBar);
   /* ^Don't mind/edit this one either unless you decide to do the dark theme one, in that case, you will have to change it accordingly*/
 
   /* insert your code here */
@@ -29,7 +29,7 @@ export default function App() {
       <View style={styles.navBar}>
         <Image
           style={styles.icons}
-          source={require("./assets/Icons/menu_light.png")}
+          source={require("./assets/Icons/menu_dark.png")}
         />
         <Text
           style={(styles.icons, { fontFamily: "Sydney-Bold", fontSize: 32 })}
@@ -38,7 +38,7 @@ export default function App() {
         </Text>
         <Image
           style={styles.icons}
-          source={require("./assets/Icons/sun.png")}
+          source={require("./assets/Icons/moon.png")}
         />
       </View>
 
@@ -55,7 +55,7 @@ export default function App() {
               left: "4%",
               fontFamily: "Sydney",
               fontSize: 32,
-              color: "white",
+              color: "black",
             }}
           >
             MTL
@@ -67,7 +67,7 @@ export default function App() {
               left: "4%",
               fontFamily: "Sydney",
               fontSize: 18,
-              color: "white",
+              color: "black",
             }}
           >
             2 miles away
@@ -88,11 +88,11 @@ export default function App() {
           <View style={styles.play}>
             <Image
               style={styles.playIcon}
-              source={require("./assets/Icons/player_light.png")}
+              source={require("./assets/Icons/player_dark.png")}
             />
             <Image
               style={styles.waveIcon}
-              source={require("./assets/Icons/audio_waveform_light.png")}
+              source={require("./assets/Icons/audio_waveform_dark.png")}
             />
           </View>
         </View>
@@ -102,21 +102,21 @@ export default function App() {
         <View style={styles.bottomIconText}>
           <Image
             style={styles.icons}
-            source={require("./assets/Icons/discover_light.png")}
+            source={require("./assets/Icons/discover_dark.png")}
           />
           <Text style={styles.actionText}>Discover</Text>
         </View>
         <View style={styles.bottomIconText}>
           <Image
             style={styles.icons}
-            source={require("./assets/Icons/heart_light.png")}
+            source={require("./assets/Icons/heart_dark.png")}
           />
           <Text style={styles.actionText}>Matches</Text>
         </View>
         <View style={styles.bottomIconText}>
           <Image
             style={styles.icons}
-            source={require("./assets/Icons/messages_light.png")}
+            source={require("./assets/Icons/messages_dark.png")}
           />
           <Text style={styles.actionText}>DMs</Text>
         </View>
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     display: "flex",
-    backgroundColor: Themes.light.bg,
+    backgroundColor: Themes.dark.bg,
     alignItems: "center",
   },
 
@@ -146,9 +146,8 @@ const styles = StyleSheet.create({
   card: {
     flex: 1,
     display: "flex",
-    // width: "100%",
     maxWidth: 585,
-    backgroundColor: Themes.light.bg,
+    backgroundColor: Themes.dark.bg,
     alignItems: "center",
     padding: "5%",
   },
@@ -160,22 +159,22 @@ const styles = StyleSheet.create({
     top: 0,
     aspectRatio: 1 / 1.1,
     marginBottom: "5%",
-    shadowColor: Themes.light.shadows.shadowColor,
-    shadowOpacity: Themes.light.shadows.shadowOpacity,
-    shadowRadius: Themes.light.shadows.shadowRadius,
-    shadowOffset: Themes.light.shadows.shadowOffset,
+    shadowColor: Themes.dark.shadows.shadowColor,
+    shadowOpacity: Themes.dark.shadows.shadowOpacity,
+    shadowRadius: Themes.dark.shadows.shadowRadius,
+    shadowOffset: Themes.dark.shadows.shadowOffset,
   },
 
   audio: {
-    backgroundColor: Themes.light.bgSecondary,
+    backgroundColor: Themes.dark.bgSecondary,
     borderRadius: 30,
     width: "100%",
     top: 0,
     paddingBottom: 24,
-    shadowColor: Themes.light.shadows.shadowColor,
-    shadowOpacity: Themes.light.shadows.shadowOpacity,
-    shadowRadius: Themes.light.shadows.shadowRadius,
-    shadowOffset: Themes.light.shadows.shadowOffset,
+    shadowColor: Themes.dark.shadows.shadowColor,
+    shadowOpacity: Themes.dark.shadows.shadowOpacity,
+    shadowRadius: Themes.dark.shadows.shadowRadius,
+    shadowOffset: Themes.dark.shadows.shadowOffset,
   },
 
   icons: {
@@ -238,8 +237,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "100%",
     padding: "2%",
-    backgroundColor: Themes.light.navigation,
-
+    backgroundColor: Themes.dark.navigation,
     position: "absolute",
     bottom: 0,
   },
@@ -247,8 +245,9 @@ const styles = StyleSheet.create({
   actionText: {
     fontFamily: "Sydney",
     fontSize: 18,
-    color: Themes.light.textSecondary,
+    color: Themes.dark.textSecondary,
   },
+
   bottomIconText: {
     display: "flex",
     justifyContent: "center",
